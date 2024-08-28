@@ -1,6 +1,7 @@
 #!/bin/sh
 ln -sf /usr/share/zoneinfo/Africa/Cairo /etc/localtime
 hwclock --systohc
+rm /etc/locale.gen
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
@@ -15,5 +16,6 @@ echo "title my love" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options root=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
+pacman -S base-devel git
 fastfetch
 echo "i'm done nigga"
