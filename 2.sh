@@ -6,8 +6,8 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "waifu" >> /etc/hostname
-mkinitcpio -P
 bootctl install
+rm /boot/loader/loader.conf
 echo "default arch.conf" >> /boot/loader/loader.conf
 echo "timeout 3" >> /boot/loader/loader.conf
 echo "console-mode max" >> /boot/loader/loader.conf
