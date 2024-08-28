@@ -5,5 +5,3 @@ mount /dev/sda2 /mnt
 mount --mkdir /dev/sda1 /mnt/boot
 pacstrap -K /mnt base linux linux-firmware intel-ucode sof-firmware networkmanager nano fastfetch
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
-
