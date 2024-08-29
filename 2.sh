@@ -20,4 +20,7 @@ pacman -S --noconfirm base-devel git
 useradd -m ham
 echo "ham" | passwd --stdin ham
 echo "ham ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin
+makepkg -si
 echo "i'm done nigga"
