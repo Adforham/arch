@@ -1,1 +1,1 @@
-my shitty archinstall script (i don't recommend you using this)
+my shitty archinstall script (this is just for me i don't recommend you using this)
