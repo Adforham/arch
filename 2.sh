@@ -16,11 +16,15 @@ echo "title arch" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options root=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
-pacman -S --noconfirm base-devel git
+pacman -S --noconfirm base-devel git bluez bluez-utils pipewire-audio pipewire-pulse pipewire-alsa
 useradd -m ham
 echo "ham" | passwd --stdin ham
 echo "ham ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 git clone https://aur.archlinux.org/paru-bin.git
 cd paru-bin
 makepkg -si
+systemctl enable bluetooth
+systemctl start bluetooth
+systemctl enable NetworkManager
+systemctl start NetworkManager
 echo "i'm done nigga"
