@@ -22,4 +22,5 @@ systemctl enable bluetooth
 useradd -m ham
 echo "ham" | passwd --stdin ham
 echo "ham ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo "ham" | passwd --stdin
 echo "i'm done nigga"
