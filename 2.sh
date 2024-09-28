@@ -16,7 +16,7 @@ echo "title arch" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options root=/dev/nvme0n1p2 rw" >> /boot/loader/entries/arch.conf
-pacman -S --noconfirm base-devel git bluez bluez-utils pipewire-audio pipewire-pulse pipewire-alsa fastfetch
+pacman -S --noconfirm base-devel git bluez bluez-utils pipewire-audio pipewire-pulse pipewire-alsa fastfetch --needed
 systemctl enable NetworkManager
 systemctl enable bluetooth
 useradd -m ham
