@@ -9,7 +9,7 @@ echo "arch" >> /etc/hostname
 bootctl install
 rm /boot/loader/loader.conf
 echo "default arch.conf" >> /boot/loader/loader.conf
-echo "timeout 3" >> /boot/loader/loader.conf
+echo "timeout 0" >> /boot/loader/loader.conf
 echo "console-mode max" >> /boot/loader/loader.conf
 echo "editor no" >> /boot/loader/loader.conf
 echo "title arch" >> /boot/loader/entries/arch.conf
