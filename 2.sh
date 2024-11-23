@@ -18,9 +18,9 @@ echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options root=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
 #pacman -S --noconfirm base-devel git bluez pipewire-audio pipewire-pulse pipewire-alsa fastfetch --needed
 systemctl enable NetworkManager
-systemctl enable bluetooth
+#systemctl enable bluetooth
 useradd -m ham
 echo "ham" | passwd --stdin ham
 echo "ham ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 echo "ham" | passwd --stdin
-fastfetch -c examples/22
+#fastfetch -c examples/22
