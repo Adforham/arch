@@ -16,10 +16,6 @@ echo "title arch" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options root=/dev/nvme0n1p2 rw" >> /boot/loader/entries/arch.conf
-pacman -S --noconfirm base-devel git pipewire-audio pipewire-pulse pipewire-alsa fastfetch --needed
+pacman -S --noconfirm base-devel git --needed
 systemctl enable NetworkManager
-useradd -m ham
-echo "ham" | passwd --stdin ham
-echo "ham ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 echo "ham" | passwd --stdin
-fastfetch -c examples/22
