@@ -18,4 +18,6 @@ echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options root=/dev/nvme0n1p2 rw" >> /boot/loader/entries/arch.conf
 pacman -S --noconfirm base-devel git --needed
 systemctl enable NetworkManager
+useradd -m ham
+echo "ham" | passwd ham --stdin
 echo "ham" | passwd --stdin
